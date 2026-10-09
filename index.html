@@ -8,12 +8,11 @@
 <body>
   <main class="shell">
     <header class="topbar">
-      <a class="brand" href="./" aria-label="하나씩 홈"><span class="brand-icon">✓</span> 하나씩</a>
       <nav aria-label="할 일 보기">
         <button class="nav-item active" data-filter="all">모든 할 일 <span id="count-all" class="count">0</span></button>
         <button class="nav-item" data-filter="today">오늘 할 일 <span id="count-today" class="count">0</span></button>
       </nav>
-      <div class="utilities"><button id="backup-open" class="quiet" title="백업 · 불러오기">백업</button><button id="install" class="quiet" title="앱처럼 켜두기">설치</button></div>
+      <div class="utilities"><button id="backup-open" class="quiet" title="백업 · 불러오기">백업</button></div>
     </header>
     <section class="list-section" aria-label="할 일 목록" tabindex="0"><div id="task-list"></div><div id="empty" class="empty">할 일 없음</div></section>
     <form id="add-form" class="composer">
@@ -23,7 +22,7 @@
   </main>
   <dialog id="edit-dialog"><form id="edit-form"><div class="dialog-heading"><h2>할 일 수정</h2><button type="button" class="icon-button close-dialog" aria-label="닫기">×</button></div><label class="field">할 일<input id="edit-title" maxlength="300" required></label><div class="form-columns"><label class="field">마감일<input type="date" id="edit-due"></label><label class="field">우선순위<select id="edit-priority"><option value="high">높음</option><option value="normal">보통</option><option value="low">낮음</option></select></label></div><div class="dialog-actions"><button type="button" class="secondary close-dialog">취소</button><button class="primary" type="submit">저장</button></div></form></dialog>
   <dialog id="backup-dialog"><div class="dialog-heading"><h2>목록 백업</h2><button class="icon-button close-dialog" aria-label="닫기">×</button></div><button id="export" class="primary wide">백업 파일 저장</button><label class="secondary wide import-label">백업 파일 불러오기<input type="file" id="import" accept=".json,application/json" hidden></label><p class="hint">불러온 항목은 현재 목록에 합쳐져요.</p></dialog>
-  <dialog id="install-dialog"><div class="dialog-heading"><h2>앱처럼 켜두기</h2><button class="icon-button close-dialog" aria-label="닫기">×</button></div><p>이 사이트를 독립된 앱 창으로 열 수 있어요.</p><ul><li><strong>Mac Safari</strong><br>파일 메뉴 → Dock에 추가</li><li><strong>Chrome / Edge</strong><br>주소창의 설치 아이콘 또는 메뉴의 앱 설치</li></ul><p class="hint">설치 메뉴는 지원되는 브라우저에서 HTTPS 주소로 접속했을 때 사용할 수 있어요. 설치한 브라우저를 계속 사용하면 목록도 유지됩니다.</p></dialog>
+
   <div id="toast" role="status" aria-live="polite" hidden><span id="toast-message"></span><button id="undo" hidden>되돌리기</button></div>
   <script src="./app.js" defer></script>
 </body>
