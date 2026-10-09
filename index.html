@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#2457eb"><meta name="description" content="적고, 하나씩 끝내는 나의 할 일 목록.">
-  <title>하나씩 · 할 일</title><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="./icon-192.png"><link rel="manifest" href="./manifest.webmanifest"><link rel="stylesheet" href="./style.css">
+  <title>하나씩 · 할 일</title><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="./icon-192.png"><link rel="manifest" href="./manifest.webmanifest"><link rel="stylesheet" href="./style.css?v=3">
 </head>
 <body>
   <main class="shell">
@@ -24,6 +24,6 @@
   <dialog id="backup-dialog"><div class="dialog-heading"><h2>목록 백업</h2><button class="icon-button close-dialog" aria-label="닫기">×</button></div><button id="export" class="primary wide">백업 파일 저장</button><label class="secondary wide import-label">백업 파일 불러오기<input type="file" id="import" accept=".json,application/json" hidden></label><p class="hint">불러온 항목은 현재 목록에 합쳐져요.</p></dialog>
 
   <div id="toast" role="status" aria-live="polite" hidden><span id="toast-message"></span><button id="undo" hidden>되돌리기</button></div>
-  <script src="./app.js" defer></script>
+  <script src="./app.js?v=3" defer></script>
 </body>
 </html>
